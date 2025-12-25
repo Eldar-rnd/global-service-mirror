@@ -44,24 +44,14 @@
   --gs-blur: 14px;
 }
 
-html, html, body{min-height:100%;}
+html, body{background:var(--gs-bg) !important;color:var(--gs-text);color-scheme:light;}
 
-body{
-  background-color: var(--gs-bg) !important;
-  color: var(--gs-text);
-  color-scheme: light;
-}
-
-body{
-  background-image:
-    radial-gradient(980px 700px at 16% -12%, rgba(210,5,30,.08), transparent 60%),
+body{background-image:radial-gradient(980px 700px at 16% -12%, rgba(210,5,30,.08), transparent 60%),
     radial-gradient(920px 640px at 92% -12%, rgba(17,19,22,.06), transparent 62%),
-    radial-gradient(760px 540px at 56% 118%, rgba(210,5,30,.05), transparent 62%);
-  background-attachment: scroll;
-}
+    radial-gradient(760px 540px at 56% 118%, rgba(210,5,30,.05), transparent 62%) !important;background-attachment:scroll !important;}
 
 /* Prevent accidental horizontal scroll from transforms / wide elements. */
-html{background:var(--gs-bg); overflow-x:hidden; }
+html{ overflow-x:hidden; }
 body{ overflow-x:hidden; }
 
 /* Base links */
@@ -132,4 +122,16 @@ a:hover{ color: inherit; }
 
 @media (prefers-reduced-motion: reduce){
   *, *::before, *::after{ transition:none !important; animation:none !important; scroll-behavior:auto !important; }
+}
+
+
+/* Force light base (last-resort) */
+html body, html body.gs-skin-light{
+  background-color: var(--gs-bg) !important;
+  color: var(--gs-text) !important;
+  color-scheme: light;
+}
+html body::before, html body::after{
+  display:none !important;
+  content:'' !important;
 }
