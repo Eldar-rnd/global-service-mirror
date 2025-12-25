@@ -1,0 +1,10 @@
+# мусор/артефакты
+*.log
+.DS_Store
+Thumbs.db
+node_modules/
+vendor/
+cache/
+# ничего из WP core и медиатеки не должно появляться в зеркале
+wp-config.php
+wp-content/uploads/

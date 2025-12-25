@@ -1,0 +1,155 @@
+/* GS UI Enhancements */
+html{ overflow-x:hidden; }
+body{ overflow-x:hidden; }
+
+/* Mobile bottom bar (only visible <= 980px by JS) */
+.gs-mbar{
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  padding: 10px 12px calc(10px + env(safe-area-inset-bottom, 0px));
+  background: rgba(15,17,22,.72);
+  backdrop-filter: blur(14px);
+  border-top: 1px solid rgba(255,255,255,.10);
+}
+.gs-mbar__row{
+  width: min(1240px, calc(100% - 0px));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+.gs-mbar__btn{
+  height: 44px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.14);
+  background: rgba(255,255,255,.06);
+  color: rgba(255,255,255,.92);
+  font-weight: 650;
+  font-size: 13px;
+  letter-spacing: -.01em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+}
+.gs-mbar__btn:active{ transform: translateY(1px); }
+.gs-mbar__btn--accent{
+  border-color: rgba(210,5,30,.40);
+  background: rgba(210,5,30,.22);
+}
+.gs-mbar__btn--accent:hover{ background: rgba(210,5,30,.26); }
+
+/* Prevent bar overlap with footer content on mobile: add padding-bottom when bar exists. */
+body.gs-has-mbar{
+  padding-bottom: 72px;
+}
+
+
+/* Toasts */
+.gs-toast-host{
+  position: fixed;
+  left: 12px;
+  right: 12px;
+  bottom: 84px; /* above mobile bar */
+  z-index: 10000;
+  display: grid;
+  gap: 10px;
+  pointer-events: none;
+}
+.gs-toast{
+  pointer-events: none;
+  width: min(520px, 100%);
+  margin: 0 auto;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,.14);
+  background: rgba(15,17,22,.78);
+  backdrop-filter: blur(14px);
+  color: rgba(255,255,255,.92);
+  padding: 12px 14px;
+  box-shadow: 0 18px 55px rgba(0,0,0,.40);
+  transform: translateY(12px);
+  opacity: 0;
+  transition: transform .22s ease, opacity .22s ease;
+}
+.gs-toast.is-in{
+  transform: translateY(0);
+  opacity: 1;
+}
+
+
+/* Active nav link (header/footer/nav) */
+header a.is-active,
+nav a.is-active,
+footer a.is-active{
+  position: relative;
+}
+header a.is-active::after,
+nav a.is-active::after,
+footer a.is-active::after{
+  content:'';
+  position:absolute;
+  left: 10%;
+  right: 10%;
+  bottom: -6px;
+  height: 2px;
+  border-radius: 999px;
+  background: rgba(210,5,30,.75);
+}
+
+
+/* Accordion (generic) */
+.gs-acc{
+  display:grid;
+  gap: 10px;
+}
+.gs-acc__item{
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(255,255,255,.04);
+  overflow:hidden;
+}
+.gs-acc__btn{
+  width: 100%;
+  text-align:left;
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 14px;
+  background: transparent;
+  color: rgba(255,255,255,.92);
+  border: 0;
+  cursor:pointer;
+  font-weight: 750;
+  letter-spacing: -.01em;
+}
+.gs-acc__btn:hover{ background: rgba(255,255,255,.03); }
+.gs-acc__btn:focus-visible{
+  outline: 2px solid rgba(210,5,30,.65);
+  outline-offset: -2px;
+}
+.gs-acc__chev{
+  opacity: .75;
+  transition: transform .18s ease;
+}
+.gs-acc__item.is-open .gs-acc__chev{ transform: rotate(180deg); }
+
+.gs-acc__panel{
+  padding: 0 14px 14px;
+  color: rgba(255,255,255,.70);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+
+/* Hide mobile bar when overlays are open (catalog/search lock class) */
+html.gs-uic-lock .gs-mbar,
+body.gs-uic-lock .gs-mbar{
+  transform: translateY(120%);
+  opacity: 0;
+  pointer-events: none;
+}

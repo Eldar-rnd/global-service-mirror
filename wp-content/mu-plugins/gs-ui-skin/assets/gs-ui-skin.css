@@ -1,0 +1,26 @@
+/* GS UI Skin: reduce "pure black" to graphite; keep contrast and readability. */
+html, body{
+  background-color:#141a24 !important;
+}
+
+/* Subtle depth on non-catalog pages (catalog is intentionally light). */
+body:not(.gs-catalog-page){
+  background-image:
+    radial-gradient(1100px 760px at 18% -8%, rgba(210,5,30,.14), transparent 62%),
+    radial-gradient(900px 640px at 92% -10%, rgba(255,255,255,.08), transparent 60%),
+    radial-gradient(700px 520px at 60% 120%, rgba(210,5,30,.08), transparent 58%);
+  background-attachment: fixed;
+}
+
+/* Prevent accidental horizontal scroll from transforms / wide elements. */
+html{ overflow-x:hidden; }
+body{ overflow-x:hidden; }
+
+/* If the theme uses a global container with max-width, keep it; do not force widths here. */
+
+
+/* /catalog/ is intentionally light; align body background too */
+body.gs-catalog-page{
+  background-color:#F6F7F9 !important;
+  background-image:none !important;
+}

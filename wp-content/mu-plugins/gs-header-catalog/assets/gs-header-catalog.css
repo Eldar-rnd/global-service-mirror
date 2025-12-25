@@ -1,0 +1,29 @@
+/* Header enhancer: small overlay button next to "Каталог" link */
+.gs-hc-open{
+  width: 34px;
+  height: 34px;
+  margin-left: 8px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,.14);
+  background: rgba(255,255,255,.06);
+  color: inherit;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+}
+.gs-hc-open:hover{ background: rgba(255,255,255,.10); }
+.gs-hc-open svg{
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+  opacity: .92;
+}
+
+/* If header is light, adapt border subtly */
+body:not(.gs-landing) .gs-hc-open{
+  border-color: rgba(17,18,23,.14);
+  background: rgba(17,18,23,.03);
+}
+body:not(.gs-landing) .gs-hc-open:hover{ background: rgba(17,18,23,.06); }
