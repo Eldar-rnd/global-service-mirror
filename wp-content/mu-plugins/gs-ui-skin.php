@@ -2,11 +2,11 @@
 /**
  * Plugin Name: GS UI Skin (MU)
  * Description: Global UI skin tweaks (frontend). Softens the pure-black background to a light neutral tone. Safe, CSS-only.
- * Version: 0.5.6
+ * Version: 0.5.7
  */
 if (!defined('ABSPATH')) exit;
 
-define('GS_UIS_VER', '0.5.6');
+define('GS_UIS_VER', '0.5.7');
 define('GS_UIS_URL', content_url('mu-plugins/gs-ui-skin'));
 
 
@@ -30,7 +30,7 @@ add_action('wp_head', function() {
   if (is_admin()) return;
   if (gs_uis_disabled()) return;
   echo "<style id='gs-ui-skin-force'>"
-    . "html body{background-color:var(--gs-bg) !important;color:var(--gs-text) !important;color-scheme:light;}"
+    . "html body{background-color:var(--gs-bg) !important;color-scheme:light;}"
     . "html body{background-image:"
     . "radial-gradient(980px 700px at 16% -12%, rgba(210,5,30,.08), transparent 60%),"
     . "radial-gradient(920px 640px at 92% -12%, rgba(17,19,22,.06), transparent 62%),"

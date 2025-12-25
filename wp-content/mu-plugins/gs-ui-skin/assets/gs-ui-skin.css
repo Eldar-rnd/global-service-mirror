@@ -135,3 +135,159 @@ html body::before, html body::after{
   display:none !important;
   content:'' !important;
 }
+
+/* =========================================================
+   Light skin — Contrast Guard
+   Goal: eliminate unreadable combinations (white-on-white / black-on-black)
+   while keeping accents intact.
+   ========================================================= */
+
+html body.gs-skin-light{
+  --gs-bg: #f6f7f9;
+  --gs-surface: #ffffff;
+  --gs-surface-2: #f0f2f5;
+  --gs-surface-3: #e7eaf0;
+  --gs-text: #111316;
+  --gs-text-muted: #5b6472;
+  --gs-border: rgba(17,19,22,.14);
+  --gs-border-soft: rgba(17,19,22,.10);
+  --gs-shadow: 0 18px 44px rgba(17,19,22,.12);
+  --gs-shadow-soft: 0 10px 30px rgba(17,19,22,.10);
+  --gs-accent: #D2051E;
+  --gs-on-accent: #ffffff;
+}
+
+/* Base */
+html body.gs-skin-light{
+  background-color: var(--gs-bg) !important;
+  color: var(--gs-text) !important;
+  color-scheme: light;
+}
+
+html body.gs-skin-light a{
+  color: inherit;
+  text-decoration-color: rgba(210,5,30,.35);
+}
+html body.gs-skin-light a:hover{
+  color: var(--gs-accent);
+  text-decoration-color: rgba(210,5,30,.75);
+}
+
+/* Header / nav: force readable foreground on light background */
+html body.gs-skin-light header,
+html body.gs-skin-light nav,
+html body.gs-skin-light .site-header,
+html body.gs-skin-light .gs-header,
+html body.gs-skin-light .gs-topbar,
+html body.gs-skin-light .gs-nav{
+  background-color: var(--gs-surface) !important;
+  color: var(--gs-text) !important;
+  border-bottom: 1px solid var(--gs-border-soft) !important;
+  backdrop-filter: none !important;
+}
+
+html body.gs-skin-light header a,
+html body.gs-skin-light nav a,
+html body.gs-skin-light .site-header a,
+html body.gs-skin-light .gs-header a,
+html body.gs-skin-light .gs-topbar a,
+html body.gs-skin-light .gs-nav a{
+  color: var(--gs-text) !important;
+}
+html body.gs-skin-light header a:hover,
+html body.gs-skin-light nav a:hover{
+  color: var(--gs-accent) !important;
+}
+
+/* Icons should follow text color */
+html body.gs-skin-light header svg,
+html body.gs-skin-light nav svg{
+  fill: currentColor !important;
+  stroke: currentColor !important;
+}
+
+/* Sections / cards / panels: remove leftover dark surfaces */
+html body.gs-skin-light .gs-card,
+html body.gs-skin-light .gs-panel,
+html body.gs-skin-light .gs-box,
+html body.gs-skin-light .gs-section,
+html body.gs-skin-light .gs-surface,
+html body.gs-skin-light [class*="gs-card"],
+html body.gs-skin-light [class*="gs-panel"]{
+  background-color: var(--gs-surface) !important;
+  color: var(--gs-text) !important;
+  border: 1px solid var(--gs-border-soft) !important;
+  box-shadow: var(--gs-shadow-soft) !important;
+}
+
+html body.gs-skin-light .gs-subnav__inner,
+html body.gs-skin-light .gs-tabs,
+html body.gs-skin-light .gs-tabs__inner{
+  background-color: var(--gs-surface) !important;
+  color: var(--gs-text) !important;
+  border: 1px solid var(--gs-border-soft) !important;
+}
+
+/* Inputs */
+html body.gs-skin-light input,
+html body.gs-skin-light textarea,
+html body.gs-skin-light select{
+  background-color: var(--gs-surface) !important;
+  color: var(--gs-text) !important;
+  border-color: var(--gs-border) !important;
+}
+html body.gs-skin-light input::placeholder,
+html body.gs-skin-light textarea::placeholder{
+  color: rgba(17,19,22,.45) !important;
+}
+
+/* Buttons / chips */
+html body.gs-skin-light .gs-btn,
+html body.gs-skin-light button,
+html body.gs-skin-light .gs-chip,
+html body.gs-skin-light .gs-pill{
+  border-color: var(--gs-border) !important;
+}
+
+html body.gs-skin-light .gs-btn,
+html body.gs-skin-light .gs-chip,
+html body.gs-skin-light .gs-pill{
+  background-color: var(--gs-surface) !important;
+  color: var(--gs-text) !important;
+}
+
+html body.gs-skin-light .gs-btn:hover,
+html body.gs-skin-light .gs-chip:hover,
+html body.gs-skin-light .gs-pill:hover{
+  background-color: var(--gs-surface-2) !important;
+}
+
+/* Primary accent */
+html body.gs-skin-light .gs-btn--primary,
+html body.gs-skin-light .is-primary,
+html body.gs-skin-light [data-variant="primary"],
+html body.gs-skin-light .gs-accent{
+  background-color: var(--gs-accent) !important;
+  color: var(--gs-on-accent) !important;
+  border-color: rgba(210,5,30,.6) !important;
+}
+html body.gs-skin-light .gs-btn--primary:hover,
+html body.gs-skin-light .is-primary:hover,
+html body.gs-skin-light [data-variant="primary"]:hover{
+  filter: brightness(.96);
+}
+
+/* Focus (a11y) */
+html body.gs-skin-light :focus-visible{
+  outline: 2px solid rgba(210,5,30,.45) !important;
+  outline-offset: 2px;
+}
+
+/* Footer */
+html body.gs-skin-light footer,
+html body.gs-skin-light .site-footer,
+html body.gs-skin-light .gs-footer{
+  background-color: var(--gs-surface) !important;
+  color: var(--gs-text) !important;
+  border-top: 1px solid var(--gs-border-soft) !important;
+}
