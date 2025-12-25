@@ -2,11 +2,11 @@
 /**
  * Plugin Name: GS Smart Search (MU)
  * Description: Global search modal (Ctrl+K) over demo catalog dataset. Helps users jump to relevant demo landing pages.
- * Version: 0.4.8
+ * Version: 0.5.4
  */
 if (!defined('ABSPATH')) exit;
 
-define('GS_SS_VER', '0.4.8');
+define('GS_SS_VER', '0.5.4');
 define('GS_SS_PATH', __DIR__ . '/gs-smart-search');
 define('GS_SS_URL', content_url('mu-plugins/gs-smart-search'));
 

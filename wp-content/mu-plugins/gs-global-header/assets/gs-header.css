@@ -8,8 +8,8 @@ html{scroll-padding-top:calc(78px + var(--wp-admin--admin-bar--height, 0px));}
   z-index: 999999;
   padding: 10px 12px;
   border-radius: 12px;
-  background: rgba(255,255,255,.92);
-  color: #111;
+  background: rgba(210,5,30,.92);
+  color: #fff;
   text-decoration:none;
   font-weight: 800;
 }
@@ -21,8 +21,8 @@ html{scroll-padding-top:calc(78px + var(--wp-admin--admin-bar--height, 0px));}
   position: sticky;
   top: var(--wp-admin--admin-bar--height, 0px);
   z-index: 9000;
-  border-bottom: 1px solid rgba(255,255,255,.08);
-  background: rgba(255,255,255,.03);
+  border-bottom: 1px solid rgba(17,19,22,.08);
+  background: rgba(17,19,22,.03);
   backdrop-filter: blur(10px);
 }
 .gs-hdr__inner{
@@ -38,7 +38,7 @@ html{scroll-padding-top:calc(78px + var(--wp-admin--admin-bar--height, 0px));}
   align-items:center;
   gap: 10px;
   text-decoration:none;
-  color: rgba(255,255,255,.92);
+  color: rgba(17,19,22,.92);
   min-width: 180px;
 }
 .gs-hdr__logo{
@@ -61,7 +61,7 @@ html{scroll-padding-top:calc(78px + var(--wp-admin--admin-bar--height, 0px));}
 }
 .gs-hdr__link{
   text-decoration:none;
-  color: rgba(255,255,255,.80);
+  color: rgba(17,19,22,.80);
   padding: 8px 10px;
   border-radius: 14px;
   border: 1px solid transparent;
@@ -69,13 +69,13 @@ html{scroll-padding-top:calc(78px + var(--wp-admin--admin-bar--height, 0px));}
   font-size: 13px;
 }
 .gs-hdr__link:hover{
-  background: rgba(255,255,255,.05);
-  border-color: rgba(255,255,255,.10);
+  background: rgba(17,19,22,.05);
+  border-color: rgba(17,19,22,.10);
 }
 .gs-hdr__link[aria-current="page"]{
   background: rgba(210,5,30,.12);
   border-color: rgba(210,5,30,.22);
-  color: rgba(255,255,255,.92);
+  color: rgba(17,19,22,.92);
 }
 .gs-hdr__actions{
   margin-left:auto;
@@ -88,9 +88,9 @@ html{scroll-padding-top:calc(78px + var(--wp-admin--admin-bar--height, 0px));}
   align-items:center;
   gap: 8px;
   border-radius: 999px;
-  border: 1px solid rgba(255,255,255,.12);
-  background: rgba(255,255,255,.03);
-  color: rgba(255,255,255,.86);
+  border: 1px solid rgba(17,19,22,.12);
+  background: rgba(17,19,22,.03);
+  color: rgba(17,19,22,.86);
   padding: 9px 12px;
   cursor: pointer;
   font-weight: 850;
@@ -103,9 +103,9 @@ html{scroll-padding-top:calc(78px + var(--wp-admin--admin-bar--height, 0px));}
 }
 .gs-hdr__btn{
   border-radius: 999px;
-  border: 1px solid rgba(255,255,255,.12);
-  background: rgba(255,255,255,.03);
-  color: rgba(255,255,255,.92);
+  border: 1px solid rgba(17,19,22,.12);
+  background: rgba(17,19,22,.03);
+  color: rgba(17,19,22,.92);
   padding: 9px 12px;
   cursor:pointer;
   font-weight: 900;
@@ -116,14 +116,14 @@ html{scroll-padding-top:calc(78px + var(--wp-admin--admin-bar--height, 0px));}
 }
 .gs-hdr__btn:hover,
 .gs-hdr__city:hover{
-  background: rgba(255,255,255,.05);
+  background: rgba(17,19,22,.05);
 }
 .gs-hdr__burger{
   width: 44px;
   height: 44px;
   border-radius: 16px;
-  border: 1px solid rgba(255,255,255,.12);
-  background: rgba(255,255,255,.03);
+  border: 1px solid rgba(17,19,22,.12);
+  background: rgba(17,19,22,.03);
   cursor: pointer;
   display:none;
   align-items:center;
@@ -148,7 +148,7 @@ html{scroll-padding-top:calc(78px + var(--wp-admin--admin-bar--height, 0px));}
   right:0;
   height:2px;
   border-radius: 2px;
-  background: rgba(255,255,255,.85);
+  background: rgba(17,19,22,.85);
 }
 .gs-hdr__burgerbars:before{ top: 1px; }
 .gs-hdr__burgerbars:after{ bottom: 1px; }
@@ -171,7 +171,7 @@ html{scroll-padding-top:calc(78px + var(--wp-admin--admin-bar--height, 0px));}
 .gs-drawer__backdrop{
   position:absolute;
   inset: 0;
-  background: rgba(0,0,0,.55);
+  background: var(--gs-backdrop);
 }
 .gs-drawer__panel{
   position:absolute;
@@ -179,8 +179,8 @@ html{scroll-padding-top:calc(78px + var(--wp-admin--admin-bar--height, 0px));}
   top: 0;
   bottom: 0;
   width: min(420px, 92vw);
-  border-left: 1px solid rgba(255,255,255,.10);
-  background: rgba(16,18,22,.98);
+  border-left: 1px solid var(--gs-border);
+  background: var(--gs-modal);
   padding: 14px;
   display:flex;
   flex-direction: column;
@@ -194,23 +194,23 @@ html{scroll-padding-top:calc(78px + var(--wp-admin--admin-bar--height, 0px));}
 .gs-drawer__title{
   font-weight: 950;
   letter-spacing: -0.02em;
-  color: rgba(255,255,255,.92);
+  color: rgba(17,19,22,.92);
 }
 .gs-drawer__close{
   width: 44px;
   height: 44px;
   border-radius: 16px;
-  border: 1px solid rgba(255,255,255,.12);
-  background: rgba(255,255,255,.03);
-  color: rgba(255,255,255,.92);
+  border: 1px solid rgba(17,19,22,.12);
+  background: rgba(17,19,22,.03);
+  color: rgba(17,19,22,.92);
   cursor:pointer;
 }
 .gs-drawer__meta{
   border-radius: 18px;
-  border: 1px solid rgba(255,255,255,.10);
-  background: rgba(255,255,255,.03);
+  border: 1px solid rgba(17,19,22,.10);
+  background: rgba(17,19,22,.03);
   padding: 12px;
-  color: rgba(255,255,255,.72);
+  color: rgba(17,19,22,.72);
   display:flex;
   gap: 10px;
   align-items:center;
@@ -219,9 +219,9 @@ html{scroll-padding-top:calc(78px + var(--wp-admin--admin-bar--height, 0px));}
 .gs-drawer__citybtn{
   margin-left:auto;
   border-radius: 999px;
-  border: 1px solid rgba(255,255,255,.12);
-  background: rgba(255,255,255,.03);
-  color: rgba(255,255,255,.92);
+  border: 1px solid rgba(17,19,22,.12);
+  background: rgba(17,19,22,.03);
+  color: rgba(17,19,22,.92);
   padding: 8px 10px;
   cursor:pointer;
   font-weight: 900;
@@ -233,15 +233,15 @@ html{scroll-padding-top:calc(78px + var(--wp-admin--admin-bar--height, 0px));}
 }
 .gs-drawer__link{
   text-decoration:none;
-  color: rgba(255,255,255,.88);
+  color: rgba(17,19,22,.88);
   padding: 10px 12px;
   border-radius: 16px;
-  border: 1px solid rgba(255,255,255,.10);
-  background: rgba(255,255,255,.02);
+  border: 1px solid rgba(17,19,22,.10);
+  background: rgba(17,19,22,.02);
   font-weight: 900;
 }
 .gs-drawer__link:hover{
-  background: rgba(255,255,255,.05);
+  background: rgba(17,19,22,.05);
 }
 .gs-drawer__cta{
   display:flex;
@@ -250,15 +250,15 @@ html{scroll-padding-top:calc(78px + var(--wp-admin--admin-bar--height, 0px));}
   margin-top:auto;
 }
 .gs-drawer__note{
-  color: rgba(255,255,255,.60);
+  color: rgba(17,19,22,.60);
   font-size: 12px;
   line-height: 1.5;
 }
 
 /* compact header after scroll */
 .gs-hdr.is-scrolled{
-  background: rgba(16,18,22,.78);
-  border-bottom-color: rgba(255,255,255,.10);
+  background: var(--gs-surface3);
+  border-bottom-color: rgba(17,19,22,.10);
 }
 .gs-hdr.is-scrolled .gs-hdr__inner{
   padding-top: 8px;

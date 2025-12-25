@@ -18,8 +18,8 @@
 }
 .gs-mb__card{
   border-radius: 22px;
-  border: 1px solid rgba(255,255,255,.10);
-  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(17,19,22,.10);
+  background: rgba(17,19,22,.04);
   padding: 14px;
 }
 .gs-mb__icon{
@@ -33,11 +33,11 @@
 .gs-mb__t{
   font-weight: 800;
   letter-spacing: -.01em;
-  color: rgba(255,255,255,.92);
+  color: rgba(17,19,22,.92);
   margin-bottom: 6px;
 }
 .gs-mb__d{
-  color: rgba(255,255,255,.68);
+  color: rgba(17,19,22,.68);
   font-size: 14px;
   line-height: 1.55;
 }
@@ -49,7 +49,7 @@
   align-items:center;
 }
 .gs-mb__panel{
-  border: 1px solid rgba(255,255,255,.10);
+  border: 1px solid rgba(17,19,22,.10);
 }
 
 /* Make cards safe as <a> */
@@ -59,6 +59,6 @@ a.gs-mb__card{
   display: block;
 }
 a.gs-mb__card:hover{
-  border-color: rgba(255,255,255,.18);
-  background: rgba(255,255,255,.05);
+  border-color: rgba(17,19,22,.18);
+  background: rgba(17,19,22,.05);
 }

@@ -5,7 +5,7 @@
   line-height: 1.05;
   letter-spacing: -0.03em;
   margin: 12px 0 0;
-  color: rgba(255,255,255,.92);
+  color: rgba(17,19,22,.92);
   font-weight: 900;
 }
 .gs-err__lead{ margin-top: 10px; max-width: 80ch; }
@@ -23,13 +23,13 @@
   gap: 12px;
 }
 .gs-err__links a{
-  color: rgba(255,255,255,.84);
+  color: rgba(17,19,22,.84);
   text-decoration: none;
-  border-bottom: 1px solid rgba(255,255,255,.18);
+  border-bottom: 1px solid rgba(17,19,22,.18);
 }
 .gs-err__links a:hover{ border-bottom-color: rgba(210,5,30,.55); }
 .gs-err__note{
   margin-top: 12px;
-  color: rgba(255,255,255,.62);
+  color: rgba(17,19,22,.62);
   font-size: 13px;
 }

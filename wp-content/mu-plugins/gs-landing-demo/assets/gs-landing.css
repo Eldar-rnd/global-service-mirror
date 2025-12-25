@@ -7,9 +7,9 @@ body.gs-landing{ max-width:100%; overflow-x:hidden; }
 /* Softer "graphite" background only on landing pages (can be refined later) */
 body.gs-landing{
   background:
-    radial-gradient(1100px 700px at 10% -10%, rgba(210,5,30,.16), rgba(0,0,0,0) 60%),
-    radial-gradient(900px 600px at 90% -20%, rgba(255,255,255,.09), rgba(0,0,0,0) 55%),
-    linear-gradient(180deg, #181d2a 0%, #121a2b 100%);
+    radial-gradient(980px 700px at 16% -12%, rgba(210,5,30,.08), transparent 60%),
+    radial-gradient(920px 640px at 92% -12%, rgba(17,19,22,.06), transparent 62%),
+    radial-gradient(760px 540px at 56% 118%, rgba(210,5,30,.05), transparent 62%);
 }
 
 /* WP admin bar offset */
@@ -23,11 +23,11 @@ body.gs-landing{
 /* Breadcrumb */
 .gs-breadcrumb{
   display:flex;gap:10px;align-items:center;flex-wrap:wrap;
-  font-size:13px;color:rgba(255,255,255,.62);
+  font-size:13px;color:rgba(17,19,22,.62);
   margin-top:10px
 }
-.gs-breadcrumb a{ color:rgba(255,255,255,.72); text-decoration:none; }
-.gs-breadcrumb a:hover{ color:rgba(255,255,255,.92); }
+.gs-breadcrumb a{ color:rgba(17,19,22,.72); text-decoration:none; }
+.gs-breadcrumb a:hover{ color:rgba(17,19,22,.92); }
 
 /* Sticky subnav under header */
 .gs-subnav{
@@ -40,26 +40,26 @@ body.gs-landing{
   display:flex;align-items:center;gap:8px;flex-wrap:wrap;
   max-width:100%;
   padding:8px;border-radius:999px;
-  border:1px solid rgba(255,255,255,.10);
-  background:rgba(11,12,15,.55);
+  border:1px solid rgba(17,19,22,.10);
+  background: rgba(17,19,22,.78);
   backdrop-filter:blur(14px);
 }
 .gs-subnav a{
   padding:10px 12px;border-radius:999px;
-  color:rgba(255,255,255,.72);
+  color:rgba(17,19,22,.72);
   font-size:14px;line-height:1;
   border:1px solid transparent;
   text-decoration:none;
 }
-.gs-subnav a:hover{background:rgba(255,255,255,.05);color:rgba(255,255,255,.92)}
+.gs-subnav a:hover{background:rgba(17,19,22,.05);color:rgba(17,19,22,.92)}
 .gs-subnav a.is-active{
   background:rgba(210,5,30,.14);
   border-color:rgba(210,5,30,.34);
-  color:rgba(255,255,255,.92);
+  color:rgba(17,19,22,.92);
 }
 
 /* Accordion */
-.gs-acc{border:1px solid rgba(255,255,255,.10);background:rgba(255,255,255,.03);border-radius:16px;overflow:hidden}
+.gs-acc{border:1px solid rgba(17,19,22,.10);background:rgba(17,19,22,.03);border-radius:16px;overflow:hidden}
 .gs-acc__btn{width:100%;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 14px;background:transparent;border:0;color:inherit;cursor:pointer;text-align:left}
 .gs-acc__btn span{font-weight:650}
 .gs-acc__panel{max-height:0;overflow:hidden;transition:max-height .18s ease;padding:0 14px}
@@ -69,18 +69,18 @@ body.gs-landing{
 .gs-landingbar{
   position:fixed;left:12px;right:12px;bottom:12px;z-index:76;
   display:none;
-  padding:10px;border-radius:22px;border:1px solid rgba(255,255,255,.12);
-  background:rgba(15,16,20,.92);
+  padding:10px;border-radius:22px;border:1px solid rgba(17,19,22,.12);
+  background: rgba(17,19,22,.92);
   backdrop-filter:blur(14px);
   box-shadow:0 18px 55px rgba(0,0,0,.35)
 }
 .gs-landingbar__top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:10px}
-.gs-landingbar__ctx{font-size:12px;color:rgba(255,255,255,.62);max-width:70%}
+.gs-landingbar__ctx{font-size:12px;color:rgba(17,19,22,.62);max-width:70%}
 .gs-landingbar__row{display:grid;grid-template-columns:1fr 1fr 1.2fr;gap:8px}
 .gs-landingbar__row a{
   display:flex;align-items:center;justify-content:center;
-  padding:10px 10px;border-radius:999px;background:rgba(255,255,255,.03);
-  border:1px solid rgba(255,255,255,.10);font-size:13px;min-height:40px;
+  padding:10px 10px;border-radius:999px;background:rgba(17,19,22,.03);
+  border:1px solid rgba(17,19,22,.10);font-size:13px;min-height:40px;
   text-decoration:none;
 }
 .gs-landingbar__row a.gs-landingbar__lead{

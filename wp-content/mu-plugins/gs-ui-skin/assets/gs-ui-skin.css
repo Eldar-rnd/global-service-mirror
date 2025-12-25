@@ -1,26 +1,133 @@
-/* GS UI Skin: reduce "pure black" to graphite; keep contrast and readability. */
-html, body{
-  background-color:#141a24 !important;
+/* GS UI Skin
+   Design tokens and base primitives for the demo frontend.
+   Default: light, high-contrast, calm background with accent #D2051E.
+*/
+
+:root{
+  /* Core palette */
+  --gs-bg: #F6F7F9;
+  --gs-bg-deep: #EEF0F3;
+
+  --gs-text: rgba(17,19,22,.92);
+  --gs-muted: rgba(17,19,22,.66);
+  --gs-muted2: rgba(17,19,22,.56);
+
+  /* Surfaces */
+  --gs-surface: rgba(255,255,255,.92);
+  --gs-surface2: rgba(255,255,255,.78);
+  --gs-surface3: rgba(255,255,255,.88);
+  --gs-modal: rgba(255,255,255,.96);
+
+  /* Lines */
+  --gs-border: rgba(17,19,22,.12);
+  --gs-border2: rgba(17,19,22,.16);
+
+  /* Interaction */
+  --gs-hover: rgba(17,19,22,.04);
+  --gs-hover2: rgba(17,19,22,.06);
+
+  /* Depth */
+  --gs-shadow: 0 22px 70px rgba(17,19,22,.14);
+  --gs-shadow-soft: 0 18px 55px rgba(17,19,22,.10);
+  --gs-backdrop: rgba(17,19,22,.40);
+
+  /* Accent */
+  --gs-accent: #D2051E;
+
+  /* Radius */
+  --gs-radius-lg: 22px;
+  --gs-radius-md: 18px;
+  --gs-radius-sm: 16px;
+  --gs-radius-xs: 12px;
+
+  /* FX */
+  --gs-blur: 14px;
 }
 
-/* Subtle depth on non-catalog pages (catalog is intentionally light). */
-body:not(.gs-catalog-page){
+html, body{
+  background-color: var(--gs-bg) !important;
+  color: var(--gs-text);
+  color-scheme: light;
+}
+
+body{
   background-image:
-    radial-gradient(1100px 760px at 18% -8%, rgba(210,5,30,.14), transparent 62%),
-    radial-gradient(900px 640px at 92% -10%, rgba(255,255,255,.08), transparent 60%),
-    radial-gradient(700px 520px at 60% 120%, rgba(210,5,30,.08), transparent 58%);
-  background-attachment: fixed;
+    radial-gradient(980px 700px at 16% -12%, rgba(210,5,30,.08), transparent 60%),
+    radial-gradient(920px 640px at 92% -12%, rgba(17,19,22,.06), transparent 62%),
+    radial-gradient(760px 540px at 56% 118%, rgba(210,5,30,.05), transparent 62%);
+  background-attachment: scroll;
 }
 
 /* Prevent accidental horizontal scroll from transforms / wide elements. */
 html{ overflow-x:hidden; }
 body{ overflow-x:hidden; }
 
-/* If the theme uses a global container with max-width, keep it; do not force widths here. */
+/* Base links */
+a{ color: inherit; }
+a:hover{ color: inherit; }
 
+/* Containers */
+.gs-container{
+  width: min(1240px, calc(100% - 32px));
+  margin: 0 auto;
+}
+@media (max-width: 560px){
+  .gs-container{ width: min(1240px, calc(100% - 24px)); }
+}
 
-/* /catalog/ is intentionally light; align body background too */
-body.gs-catalog-page{
-  background-color:#F6F7F9 !important;
-  background-image:none !important;
+/* Typography helpers (used across templates) */
+.gs-kicker{
+  font-size: 12px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--gs-muted2);
+}
+.gs-h1{
+  font-size: clamp(34px, 4vw, 56px);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  margin: 12px 0 0;
+  font-weight: 900;
+  color: var(--gs-text);
+}
+.gs-h2{
+  font-size: clamp(22px, 2.4vw, 32px);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin: 0;
+  font-weight: 900;
+  color: var(--gs-text);
+}
+
+.gs-muted{ color: var(--gs-muted); }
+
+/* Buttons */
+.gs-btn{
+  height: 44px;
+  padding: 0 14px;
+  border-radius: 999px;
+  border: 1px solid var(--gs-border2);
+  background: var(--gs-surface2);
+  color: var(--gs-text);
+  text-decoration: none;
+  font-weight: 800;
+  letter-spacing: -.01em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+}
+.gs-btn:hover{ background: var(--gs-surface); }
+.gs-btn:active{ transform: translateY(1px); }
+.gs-btn:focus-visible{ outline: 2px solid rgba(210,5,30,.55); outline-offset: 2px; }
+
+.gs-btn--accent{
+  border-color: rgba(210,5,30,.35);
+  background: rgba(210,5,30,.10);
+}
+.gs-btn--accent:hover{ background: rgba(210,5,30,.14); }
+
+@media (prefers-reduced-motion: reduce){
+  *, *::before, *::after{ transition:none !important; animation:none !important; scroll-behavior:auto !important; }
 }

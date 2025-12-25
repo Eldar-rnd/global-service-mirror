@@ -7,11 +7,11 @@
   line-height: 1.05;
   letter-spacing: -0.03em;
   margin: 12px 0 0;
-  color: rgba(255,255,255,.92);
+  color: rgba(17,19,22,.92);
   font-weight: 900;
 }
 .gs-home__city{
-  color: rgba(255,255,255,.92);
+  color: rgba(17,19,22,.92);
   border-bottom: 2px solid rgba(210,5,30,.55);
 }
 .gs-home__lead{
@@ -27,7 +27,7 @@
 }
 .gs-home__hint{
   margin-top: 12px;
-  color: rgba(255,255,255,.60);
+  color: rgba(17,19,22,.60);
   font-size: 13px;
   line-height: 1.5;
   max-width: 86ch;
@@ -45,8 +45,8 @@
 }
 .gs-home__card{
   border-radius: 26px;
-  border: 1px solid rgba(255,255,255,.10);
-  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(17,19,22,.10);
+  background: rgba(17,19,22,.04);
   padding: 14px;
 }
 .gs-home__cardicon{
@@ -60,11 +60,11 @@
   margin-top: 10px;
   font-weight: 900;
   letter-spacing: -0.01em;
-  color: rgba(255,255,255,.92);
+  color: rgba(17,19,22,.92);
 }
 .gs-home__cardd{
   margin-top: 6px;
-  color: rgba(255,255,255,.66);
+  color: rgba(17,19,22,.66);
   font-size: 14px;
   line-height: 1.55;
 }
@@ -81,14 +81,14 @@
 }
 .gs-home__chip{
   border-radius: 999px;
-  border: 1px solid rgba(255,255,255,.12);
-  background: rgba(255,255,255,.04);
-  color: rgba(255,255,255,.86);
+  border: 1px solid rgba(17,19,22,.12);
+  background: rgba(17,19,22,.04);
+  color: rgba(17,19,22,.86);
   padding: 10px 12px;
   font-weight: 750;
   cursor: pointer;
 }
-.gs-home__chip:hover{ background: rgba(255,255,255,.06); }
+.gs-home__chip:hover{ background: rgba(17,19,22,.06); }
 .gs-home__chip:focus-visible{
   outline: 2px solid rgba(210,5,30,.65);
   outline-offset: 2px;
@@ -100,11 +100,11 @@
 }
 .gs-home__link{
   border-radius: 16px;
-  border: 1px solid rgba(255,255,255,.10);
-  background: rgba(255,255,255,.03);
+  border: 1px solid rgba(17,19,22,.10);
+  background: rgba(17,19,22,.03);
   padding: 12px 14px;
-  color: rgba(255,255,255,.86);
+  color: rgba(17,19,22,.86);
   text-decoration: none;
   font-weight: 800;
 }
-.gs-home__link:hover{ background: rgba(255,255,255,.05); }
+.gs-home__link:hover{ background: rgba(17,19,22,.05); }

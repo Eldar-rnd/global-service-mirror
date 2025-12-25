@@ -2,11 +2,11 @@
 /**
  * Plugin Name: GS Global Header (MU)
  * Description: Sticky top header with mobile drawer; integrates with Smart Search and Catalog overlay.
- * Version: 0.5.1
+ * Version: 0.5.4
  */
 if (!defined('ABSPATH')) exit;
 
-define('GS_HDR_VER', '0.5.1');
+define('GS_HDR_VER', '0.5.4');
 define('GS_HDR_PATH', __DIR__ . '/gs-global-header');
 define('GS_HDR_URL', content_url('mu-plugins/gs-global-header'));
 

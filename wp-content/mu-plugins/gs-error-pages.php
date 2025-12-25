@@ -2,11 +2,11 @@
 /**
  * Plugin Name: GS Error Pages (MU)
  * Description: Friendly 404 page for frontend stage.
- * Version: 0.4.6
+ * Version: 0.5.4
  */
 if (!defined('ABSPATH')) exit;
 
-define('GS_ERR_VER', '0.4.6');
+define('GS_ERR_VER', '0.5.4');
 define('GS_ERR_PATH', __DIR__ . '/gs-error-pages');
 define('GS_ERR_URL', content_url('mu-plugins/gs-error-pages'));
 

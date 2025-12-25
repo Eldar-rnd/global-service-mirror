@@ -2,11 +2,11 @@
 /**
  * Plugin Name: GS Static Pages (MU)
  * Description: Virtual marketing pages for frontend stage: /services/, /filialy/, /garantiya/, /contacts/, /search/. Also normalizes header links if they are placeholders.
- * Version: 0.5.0
+ * Version: 0.5.4
  */
 if (!defined('ABSPATH')) { exit; }
 
-define('GS_SP_VER', '0.5.0');
+define('GS_SP_VER', '0.5.4');
 define('GS_SP_PATH', __DIR__ . '/gs-static-pages');
 define('GS_SP_URL', content_url('mu-plugins/gs-static-pages'));
 

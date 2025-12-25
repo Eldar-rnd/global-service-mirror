@@ -1,14 +1,14 @@
 /* GS Static Pages — scoped by body.gs-static-page */
 body.gs-static-page{
-  --sp-bg:#141a24;
-  --sp-panel: rgba(255,255,255,.06);
-  --sp-panel2: rgba(255,255,255,.04);
-  --sp-border: rgba(255,255,255,.10);
-  --sp-text: rgba(255,255,255,.92);
-  --sp-muted: rgba(255,255,255,.62);
-  --sp-accent:#D2051E;
+  --sp-bg: var(--gs-bg);
+  --sp-panel: var(--gs-surface2);
+  --sp-panel2: var(--gs-surface);
+  --sp-border: var(--gs-border);
+  --sp-text: var(--gs-text);
+  --sp-muted: var(--gs-muted2);
+  --sp-accent: var(--gs-accent);
   --sp-radius: 22px;
-  --sp-shadow: 0 18px 55px rgba(0,0,0,.38);
+  --sp-shadow: var(--gs-shadow-soft);
   color: var(--sp-text);
   background: var(--sp-bg);
   overflow-x:hidden;
@@ -24,7 +24,7 @@ body.gs-static-page a:hover{ text-decoration:none; }
   padding: 18px;
   border-radius: var(--sp-radius);
   border: 1px solid var(--sp-border);
-  background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+  background: linear-gradient(180deg, rgba(17,19,22,.06), rgba(17,19,22,.03));
   box-shadow: var(--sp-shadow);
   display:grid;
   grid-template-columns: 1.25fr .75fr;
@@ -51,7 +51,7 @@ body.gs-static-page a:hover{ text-decoration:none; }
   padding: 0 14px;
   border-radius: 999px;
   border: 1px solid var(--sp-border);
-  background: rgba(255,255,255,.06);
+  background: rgba(17,19,22,.06);
   color: var(--sp-text);
   cursor:pointer;
   display:inline-flex;
@@ -59,7 +59,7 @@ body.gs-static-page a:hover{ text-decoration:none; }
   justify-content:center;
   gap: 10px;
 }
-.gs-sp__btn:hover{ background: rgba(255,255,255,.09); }
+.gs-sp__btn:hover{ background: rgba(17,19,22,.09); }
 .gs-sp__btn--accent{
   border-color: rgba(210,5,30,.40);
   background: rgba(210,5,30,.18);
@@ -68,8 +68,8 @@ body.gs-static-page a:hover{ text-decoration:none; }
 
 .gs-sp__side{
   border-radius: 18px;
-  border: 1px solid rgba(255,255,255,.10);
-  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(17,19,22,.10);
+  background: rgba(17,19,22,.04);
   padding: 14px;
 }
 .gs-sp__label{ font-size:12px; letter-spacing:.08em; text-transform:uppercase; color: var(--sp-muted); }
@@ -78,13 +78,13 @@ body.gs-static-page a:hover{ text-decoration:none; }
   height: 46px;
   padding: 10px 12px;
   border-radius: 999px;
-  border: 1px solid rgba(255,255,255,.14);
-  background: rgba(10,12,16,.55);
+  border: 1px solid rgba(17,19,22,.14);
+  background: rgba(17,19,22,.03);
   color: var(--sp-text);
   outline:none;
   margin-top: 8px;
 }
-.gs-sp__input::placeholder{ color: rgba(255,255,255,.40); }
+.gs-sp__input::placeholder{ color: rgba(17,19,22,.40); }
 
 .gs-sp__grid{
   margin-top: 18px;
@@ -94,8 +94,8 @@ body.gs-static-page a:hover{ text-decoration:none; }
 }
 .gs-sp__card{
   border-radius: 18px;
-  border: 1px solid rgba(255,255,255,.10);
-  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(17,19,22,.10);
+  background: rgba(17,19,22,.04);
   padding: 14px;
 }
 .gs-sp__card h2{
@@ -113,8 +113,8 @@ body.gs-static-page a:hover{ text-decoration:none; }
 .gs-sp__faq{ margin-top: 18px; display:grid; gap: 10px; }
 .gs-sp__q{
   border-radius: 18px;
-  border: 1px solid rgba(255,255,255,.10);
-  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(17,19,22,.10);
+  background: rgba(17,19,22,.04);
   padding: 12px;
 }
 .gs-sp__q button{
@@ -147,17 +147,17 @@ body.gs-static-page a:hover{ text-decoration:none; }
   gap: 10px;
   flex-wrap: wrap;
   margin: 6px 0 14px;
-  color: rgba(255,255,255,.62);
+  color: rgba(17,19,22,.62);
   font-size: 13px;
 }
 .gs-sp__breadcrumb a{
-  color: rgba(255,255,255,.86);
+  color: rgba(17,19,22,.86);
   text-decoration: none;
   font-weight: 650;
 }
 .gs-sp__breadcrumb a:hover{ text-decoration: underline; }
 
-.gs-sp__muted{ color: rgba(255,255,255,.66); font-size:14px; line-height:1.55; }
+.gs-sp__muted{ color: rgba(17,19,22,.66); font-size:14px; line-height:1.55; }
 
 
 /* Popular chips */
@@ -167,16 +167,16 @@ body.gs-static-page a:hover{ text-decoration:none; }
   gap: 10px;
 }
 .gs-sp__chip{
-  border: 1px solid rgba(255,255,255,.14);
-  background: rgba(255,255,255,.04);
-  color: rgba(255,255,255,.88);
+  border: 1px solid rgba(17,19,22,.14);
+  background: rgba(17,19,22,.04);
+  color: rgba(17,19,22,.88);
   padding: 10px 12px;
   border-radius: 999px;
   font-weight: 750;
   letter-spacing: -.01em;
   cursor: pointer;
 }
-.gs-sp__chip:hover{ background: rgba(255,255,255,.06); }
+.gs-sp__chip:hover{ background: rgba(17,19,22,.06); }
 .gs-sp__chip:focus-visible{
   outline: 2px solid rgba(210,5,30,.65);
   outline-offset: 2px;
@@ -195,8 +195,8 @@ body.gs-static-page a:hover{ text-decoration:none; }
 }
 .gs-sp__step{
   border-radius: 22px;
-  border: 1px solid rgba(255,255,255,.10);
-  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(17,19,22,.10);
+  background: rgba(17,19,22,.04);
   padding: 14px;
 }
 .gs-sp__stepn{
@@ -209,16 +209,16 @@ body.gs-static-page a:hover{ text-decoration:none; }
   background: rgba(210,5,30,.16);
   border: 1px solid rgba(210,5,30,.24);
   font-weight: 900;
-  color: rgba(255,255,255,.90);
+  color: rgba(17,19,22,.90);
 }
 .gs-sp__stept{
   margin-top: 10px;
   font-weight: 900;
-  color: rgba(255,255,255,.92);
+  color: rgba(17,19,22,.92);
 }
 .gs-sp__stepd{
   margin-top: 6px;
-  color: rgba(255,255,255,.66);
+  color: rgba(17,19,22,.66);
   font-size: 14px;
   line-height: 1.55;
 }
@@ -227,10 +227,10 @@ body.gs-static-page a:hover{ text-decoration:none; }
   align-items:center;
   gap: 8px;
   border-radius: 999px;
-  border: 1px solid rgba(255,255,255,.12);
-  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(17,19,22,.12);
+  background: rgba(17,19,22,.04);
   padding: 8px 10px;
-  color: rgba(255,255,255,.80);
+  color: rgba(17,19,22,.80);
   font-weight: 800;
   font-size: 12px;
 }
@@ -242,14 +242,14 @@ body.gs-static-page a:hover{ text-decoration:none; }
 }
 .gs-sp__chip{
   border-radius: 999px;
-  border: 1px solid rgba(255,255,255,.12);
-  background: rgba(255,255,255,.04);
-  color: rgba(255,255,255,.86);
+  border: 1px solid rgba(17,19,22,.12);
+  background: rgba(17,19,22,.04);
+  color: rgba(17,19,22,.86);
   padding: 10px 12px;
   font-weight: 750;
   cursor: pointer;
 }
-.gs-sp__chip:hover{ background: rgba(255,255,255,.06); }
+.gs-sp__chip:hover{ background: rgba(17,19,22,.06); }
 .gs-sp__chip:focus-visible{
   outline: 2px solid rgba(210,5,30,.65);
   outline-offset: 2px;

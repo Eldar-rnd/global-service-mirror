@@ -1,7 +1,7 @@
 (function(){
   'use strict';
 
-  const GS_HDR_VER = '0.5.1';
+  const GS_HDR_VER = '0.5.4';
 
   const qs = (s,r=document)=>r.querySelector(s);
   const qsa = (s,r=document)=>Array.from(r.querySelectorAll(s));

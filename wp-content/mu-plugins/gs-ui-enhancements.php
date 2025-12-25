@@ -2,11 +2,11 @@
 /**
  * Plugin Name: GS UI Enhancements (MU)
  * Description: Frontend UX helpers: persist selected city (cookie) and add mobile bottom bar for quick navigation.
- * Version: 0.5.2
+ * Version: 0.5.4
  */
 if (!defined('ABSPATH')) exit;
 
-define('GS_UIE_VER', '0.5.2');
+define('GS_UIE_VER', '0.5.4');
 define('GS_UIE_URL', content_url('mu-plugins/gs-ui-enhancements'));
 
 function gs_uie_is_front(): bool {

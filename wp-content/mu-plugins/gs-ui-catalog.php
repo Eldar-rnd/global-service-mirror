@@ -2,11 +2,11 @@
 /**
  * Plugin Name: GS UI Catalog Overlay (MU)
  * Description: Catalog overlay (frontend-only, demo data). Opens from header link/button "Каталог" and provides quick navigation to demo landing pages.
- * Version: 0.4.8
+ * Version: 0.5.4
  */
 if (!defined('ABSPATH')) { exit; }
 
-define('GS_UIC_VER', '0.4.8');
+define('GS_UIC_VER', '0.5.4');
 define('GS_UIC_DIR', __DIR__ . '/gs-ui-catalog');
 define('GS_UIC_URL', content_url('mu-plugins/gs-ui-catalog'));
 

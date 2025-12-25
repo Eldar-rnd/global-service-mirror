@@ -2,11 +2,11 @@
 /**
  * Plugin Name: GS Homepage (MU)
  * Description: Frontend-only homepage for the build stage. Uses Smart Search/Catalog overlay and avoids fake claims.
- * Version: 0.4.6
+ * Version: 0.5.4
  */
 if (!defined('ABSPATH')) exit;
 
-define('GS_HOME_VER', '0.4.6');
+define('GS_HOME_VER', '0.5.4');
 define('GS_HOME_PATH', __DIR__ . '/gs-homepage');
 define('GS_HOME_URL', content_url('mu-plugins/gs-homepage'));
 

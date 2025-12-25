@@ -2,11 +2,11 @@
 /**
  * Plugin Name: GS Marketing Blocks (MU)
  * Description: Reusable trust/CTA blocks for frontend demo. No fake numbers, safe microcopy.
- * Version: 0.4.5
+ * Version: 0.5.4
  */
 if (!defined('ABSPATH')) exit;
 
-define('GS_MB_VER', '0.4.5');
+define('GS_MB_VER', '0.5.4');
 
 add_action('wp_enqueue_scripts', function(){
   $base = plugin_dir_url(__FILE__);

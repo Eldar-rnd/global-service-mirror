@@ -1,12 +1,12 @@
 <?php
 /**
  * Plugin Name: GS UI Skin (MU)
- * Description: Global UI skin tweaks (frontend). Softens the pure-black background to a graphite tone. Safe, CSS-only.
- * Version: 0.4.0
+ * Description: Global UI skin tweaks (frontend). Softens the pure-black background to a light neutral tone. Safe, CSS-only.
+ * Version: 0.5.4
  */
 if (!defined('ABSPATH')) exit;
 
-define('GS_UIS_VER', '0.4.0');
+define('GS_UIS_VER', '0.5.4');
 define('GS_UIS_URL', content_url('mu-plugins/gs-ui-skin'));
 
 add_action('wp_enqueue_scripts', function() {
