@@ -292,8 +292,7 @@ html body.gs-skin-light .gs-footer{
   border-top: 1px solid var(--gs-border-soft) !important;
 }
 
-/* =========================================================
-   Light skin — Catalog Overlay (gs-ui-catalog)
+
    Fix: black text on dark surfaces inside catalog/city menus.
    ========================================================= */
 
@@ -394,6 +393,121 @@ html body.gs-skin-light .gs-catalog__link:hover{
 
 /* Focus */
 html body.gs-skin-light .gs-catalog :focus-visible{
+  outline: 2px solid rgba(210,5,30,.45) !important;
+  outline-offset: 2px;
+}
+
+/* =========================================================
+   Light skin — Catalog Overlay (gs-ui-catalog)
+   Fix: catalog/city menus must be readable in light scheme.
+   Note: do not rely on body_class() output; use robust selectors.
+   ========================================================= */
+
+/* Override gs-ui-catalog variables for light scheme */
+:root{
+  --gs-uic-bg: rgba(17, 19, 22, .38);
+  --gs-uic-panel: #ffffff;
+  --gs-uic-border: rgba(17, 19, 22, .12);
+  --gs-uic-text: #111316;
+  --gs-uic-muted: rgba(17, 19, 22, .55);
+  --gs-uic-radius: 22px;
+  --gs-uic-shadow: 0 18px 44px rgba(17, 19, 22, .16);
+}
+
+/* Backdrop */
+html body .gs-catalog__backdrop{
+  background: var(--gs-uic-bg) !important;
+}
+
+/* Panel */
+html body .gs-catalog__panel{
+  background: var(--gs-uic-panel) !important;
+  color: var(--gs-uic-text) !important;
+  border: 1px solid var(--gs-uic-border) !important;
+  box-shadow: var(--gs-uic-shadow) !important;
+  backdrop-filter: none !important;
+}
+
+/* Head */
+html body .gs-catalog__head{
+  background: var(--gs-uic-panel) !important;
+  color: var(--gs-uic-text) !important;
+  border-bottom: 1px solid var(--gs-uic-border) !important;
+}
+html body .gs-catalog__title{ color: var(--gs-uic-text) !important; }
+
+/* Chips / buttons */
+html body .gs-catalog__chip,
+html body .gs-catalog__btn{
+  background: rgba(17,19,22,.04) !important;
+  color: var(--gs-uic-text) !important;
+  border: 1px solid var(--gs-uic-border) !important;
+}
+html body .gs-catalog__chip:hover,
+html body .gs-catalog__btn:hover{
+  background: rgba(17,19,22,.07) !important;
+}
+
+/* Inputs */
+html body .gs-catalog__label{ color: var(--gs-uic-muted) !important; }
+html body .gs-catalog__input{
+  background: #fff !important;
+  color: var(--gs-uic-text) !important;
+  border: 1px solid var(--gs-uic-border) !important;
+}
+html body .gs-catalog__input::placeholder{
+  color: rgba(17,19,22,.45) !important;
+}
+
+/* City switcher + dropdown */
+html body .gs-catalog__city .gs-catalog__chip{ background: rgba(17,19,22,.04) !important; }
+html body .gs-catalog__citymenu{
+  background: #fff !important;
+  color: var(--gs-uic-text) !important;
+  border: 1px solid var(--gs-uic-border) !important;
+  box-shadow: 0 10px 30px rgba(17,19,22,.12) !important;
+}
+html body .gs-catalog__citymenuhead{
+  border-bottom: 1px solid var(--gs-uic-border) !important;
+  color: var(--gs-uic-muted) !important;
+}
+html body .gs-catalog__citylist button,
+html body .gs-catalog__citylist a{
+  color: var(--gs-uic-text) !important;
+}
+html body .gs-catalog__citylist button:hover,
+html body .gs-catalog__citylist a:hover{
+  background: rgba(17,19,22,.06) !important;
+}
+
+/* Category list / item cards */
+html body .gs-catalog__list,
+html body .gs-catalog__grid{
+  color: var(--gs-uic-text) !important;
+}
+html body .gs-catalog__item{
+  background: rgba(17,19,22,.03) !important;
+  color: var(--gs-uic-text) !important;
+  border: 1px solid var(--gs-uic-border) !important;
+}
+html body .gs-catalog__item:hover{
+  background: rgba(17,19,22,.06) !important;
+}
+
+/* Close button if it's a chip */
+html body .gs-catalog__close,
+html body .gs-catalog__closebtn{
+  background: rgba(17,19,22,.05) !important;
+  color: var(--gs-uic-text) !important;
+  border: 1px solid var(--gs-uic-border) !important;
+}
+html body .gs-catalog__close:hover,
+html body .gs-catalog__closebtn:hover{
+  background: rgba(17,19,22,.08) !important;
+}
+
+/* Focus */
+html body .gs-catalog :focus-visible{
   outline: 2px solid rgba(210,5,30,.45) !important;
   outline-offset: 2px;
 }
