@@ -2,11 +2,11 @@
 /**
  * Plugin Name: GS UI Catalog Overlay (MU)
  * Description: Catalog overlay (frontend-only, demo data). Opens from header link/button "Каталог" and provides quick navigation to demo landing pages.
- * Version: 0.5.4
+ * Version: 0.6.0
  */
 if (!defined('ABSPATH')) { exit; }
 
-define('GS_UIC_VER', '0.5.4');
+define('GS_UIC_VER', '0.6.0');
 define('GS_UIC_DIR', __DIR__ . '/gs-ui-catalog');
 define('GS_UIC_URL', content_url('mu-plugins/gs-ui-catalog'));
 
@@ -126,18 +126,6 @@ add_action('wp_footer', function() {
           </div>
 
           <div class="gs-catalog__footer">
-<div class="gs-catalog__summary" data-gs-catalog-summary>
-  <div class="gs-catalog__summaryline">
-    <span class="gs-catalog__label"><?php echo esc_html__('Выбрано', 'global-service'); ?>:</span>
-    <span data-gs-catalog-summarytext></span>
-  </div>
-  <div class="gs-catalog__summaryactions">
-    <button class="gs-catalog__btn" type="button" data-gs-catalog-open><?php echo esc_html__('Открыть', 'global-service'); ?></button>
-    <button class="gs-catalog__btn" type="button" data-gs-catalog-copy><?php echo esc_html__('Скопировать ссылку', 'global-service'); ?></button>
-    <button class="gs-catalog__btn" type="button" data-gs-catalog-reset><?php echo esc_html__('Сброс', 'global-service'); ?></button>
-  </div>
-</div>
-
             <a class="gs-catalog__link" href="<?php echo esc_url(home_url('/')); ?>"><?php echo esc_html__('На главную', 'global-service'); ?></a>
             <span class="gs-catalog__sep" aria-hidden="true">·</span>
             <a class="gs-catalog__link" href="<?php echo esc_url(home_url('/catalog/')); ?>"><?php echo esc_html__('Страница каталога', 'global-service'); ?></a>
@@ -152,11 +140,6 @@ add_action('wp_footer', function() {
             <span aria-hidden="true">×</span>
           </button>
         </div>
-<div class="gs-catalog__search" style="padding: 10px 14px 0;">
-  <label class="gs-catalog__label" for="gsCatalogCityFilter"><?php echo esc_html__('Поиск города', 'global-service'); ?></label>
-  <input id="gsCatalogCityFilter" class="gs-catalog__input" type="search" placeholder="<?php echo esc_attr__('Начните вводить…', 'global-service'); ?>" autocomplete="off" data-gs-catalog-cityfilter />
-</div>
-
         <div class="gs-catalog__citylist" data-gs-catalog-citylist></div>
       </div>
     </div>
