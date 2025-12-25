@@ -4,13 +4,17 @@
 html, body{ max-width:100%; overflow-x:hidden; }
 body.gs-landing{ max-width:100%; overflow-x:hidden; }
 
-/* Softer "graphite" background only on landing pages (can be refined later) */
+/* Landing page base (light) */
 body.gs-landing{
-  background:
-    radial-gradient(980px 700px at 16% -12%, rgba(210,5,30,.08), transparent 60%),
-    radial-gradient(920px 640px at 92% -12%, rgba(17,19,22,.06), transparent 62%),
-    radial-gradient(760px 540px at 56% 118%, rgba(210,5,30,.05), transparent 62%);
+  background-color: var(--gs-bg, #F6F7F9);
+  color: var(--gs-text, rgba(17,19,22,.92));
+  background-image:
+    radial-gradient(980px 700px at 16% -12%, rgba(210,5,30,.10), transparent 62%),
+    radial-gradient(920px 640px at 92% -12%, rgba(17,19,22,.06), transparent 64%),
+    radial-gradient(760px 540px at 56% 118%, rgba(210,5,30,.06), transparent 64%);
+  background-repeat:no-repeat;
 }
+
 
 /* WP admin bar offset */
 :root{ --gs-adminbar-h:0px; --gs-header-h:72px; }
@@ -23,11 +27,11 @@ body.gs-landing{
 /* Breadcrumb */
 .gs-breadcrumb{
   display:flex;gap:10px;align-items:center;flex-wrap:wrap;
-  font-size:13px;color:rgba(17,19,22,.62);
+  font-size:13px;color:var(--gs-muted, rgba(17,19,22,.66));
   margin-top:10px
 }
-.gs-breadcrumb a{ color:rgba(17,19,22,.72); text-decoration:none; }
-.gs-breadcrumb a:hover{ color:rgba(17,19,22,.92); }
+.gs-breadcrumb a{ color:var(--gs-muted, rgba(17,19,22,.66)); text-decoration:none; }
+.gs-breadcrumb a:hover{ color:var(--gs-muted, rgba(17,19,22,.66)); }
 
 /* Sticky subnav under header */
 .gs-subnav{
@@ -40,22 +44,22 @@ body.gs-landing{
   display:flex;align-items:center;gap:8px;flex-wrap:wrap;
   max-width:100%;
   padding:8px;border-radius:999px;
-  border:1px solid rgba(17,19,22,.10);
-  background: rgba(17,19,22,.78);
+  border:1px solid var(--gs-border, rgba(17,19,22,.12));
+  background: var(--gs-surface2, rgba(255,255,255,.78));
   backdrop-filter:blur(14px);
 }
 .gs-subnav a{
   padding:10px 12px;border-radius:999px;
-  color:rgba(17,19,22,.72);
+  color:var(--gs-muted, rgba(17,19,22,.66));
   font-size:14px;line-height:1;
   border:1px solid transparent;
   text-decoration:none;
 }
-.gs-subnav a:hover{background:rgba(17,19,22,.05);color:rgba(17,19,22,.92)}
+.gs-subnav a:hover{background:rgba(17,19,22,.05);color:var(--gs-muted, rgba(17,19,22,.66))}
 .gs-subnav a.is-active{
   background:rgba(210,5,30,.14);
   border-color:rgba(210,5,30,.34);
-  color:rgba(17,19,22,.92);
+  color:var(--gs-muted, rgba(17,19,22,.66));
 }
 
 /* Accordion */
@@ -69,13 +73,13 @@ body.gs-landing{
 .gs-landingbar{
   position:fixed;left:12px;right:12px;bottom:12px;z-index:76;
   display:none;
-  padding:10px;border-radius:22px;border:1px solid rgba(17,19,22,.12);
-  background: rgba(17,19,22,.92);
+  padding:10px;border-radius:22px;border:1px solid var(--gs-border, rgba(17,19,22,.12));
+  background: var(--gs-modal, rgba(255,255,255,.96));
   backdrop-filter:blur(14px);
-  box-shadow:0 18px 55px rgba(0,0,0,.35)
+  box-shadow: var(--gs-shadow-soft, 0 18px 55px rgba(17,19,22,.10));
 }
 .gs-landingbar__top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:10px}
-.gs-landingbar__ctx{font-size:12px;color:rgba(17,19,22,.62);max-width:70%}
+.gs-landingbar__ctx{font-size:12px;color:var(--gs-muted, rgba(17,19,22,.66));max-width:70%}
 .gs-landingbar__row{display:grid;grid-template-columns:1fr 1fr 1.2fr;gap:8px}
 .gs-landingbar__row a{
   display:flex;align-items:center;justify-content:center;

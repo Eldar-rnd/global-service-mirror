@@ -44,7 +44,9 @@
   --gs-blur: 14px;
 }
 
-html, body{
+html, html, body{min-height:100%;}
+
+body{
   background-color: var(--gs-bg) !important;
   color: var(--gs-text);
   color-scheme: light;
@@ -59,7 +61,7 @@ body{
 }
 
 /* Prevent accidental horizontal scroll from transforms / wide elements. */
-html{ overflow-x:hidden; }
+html{background:var(--gs-bg); overflow-x:hidden; }
 body{ overflow-x:hidden; }
 
 /* Base links */

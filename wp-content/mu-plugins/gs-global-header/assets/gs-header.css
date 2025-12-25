@@ -21,9 +21,10 @@ html{scroll-padding-top:calc(78px + var(--wp-admin--admin-bar--height, 0px));}
   position: sticky;
   top: var(--wp-admin--admin-bar--height, 0px);
   z-index: 9000;
-  border-bottom: 1px solid rgba(17,19,22,.08);
-  background: rgba(17,19,22,.03);
+  border-bottom: 1px solid var(--gs-border, rgba(17,19,22,.12));
+  background: var(--gs-surface2, rgba(255,255,255,.78));
   backdrop-filter: blur(10px);
+  box-shadow: 0 10px 32px rgba(17,19,22,.06);
 }
 .gs-hdr__inner{
   display:flex;
@@ -69,7 +70,7 @@ html{scroll-padding-top:calc(78px + var(--wp-admin--admin-bar--height, 0px));}
   font-size: 13px;
 }
 .gs-hdr__link:hover{
-  background: rgba(17,19,22,.05);
+  background: var(--gs-surface2, rgba(255,255,255,.78));
   border-color: rgba(17,19,22,.10);
 }
 .gs-hdr__link[aria-current="page"]{
@@ -88,8 +89,8 @@ html{scroll-padding-top:calc(78px + var(--wp-admin--admin-bar--height, 0px));}
   align-items:center;
   gap: 8px;
   border-radius: 999px;
-  border: 1px solid rgba(17,19,22,.12);
-  background: rgba(17,19,22,.03);
+  border: 1px solid var(--gs-border, rgba(17,19,22,.12));
+  background: var(--gs-surface2, rgba(255,255,255,.78));
   color: rgba(17,19,22,.86);
   padding: 9px 12px;
   cursor: pointer;
@@ -103,8 +104,8 @@ html{scroll-padding-top:calc(78px + var(--wp-admin--admin-bar--height, 0px));}
 }
 .gs-hdr__btn{
   border-radius: 999px;
-  border: 1px solid rgba(17,19,22,.12);
-  background: rgba(17,19,22,.03);
+  border: 1px solid var(--gs-border, rgba(17,19,22,.12));
+  background: var(--gs-surface2, rgba(255,255,255,.78));
   color: rgba(17,19,22,.92);
   padding: 9px 12px;
   cursor:pointer;
@@ -116,14 +117,14 @@ html{scroll-padding-top:calc(78px + var(--wp-admin--admin-bar--height, 0px));}
 }
 .gs-hdr__btn:hover,
 .gs-hdr__city:hover{
-  background: rgba(17,19,22,.05);
+  background: var(--gs-surface2, rgba(255,255,255,.78));
 }
 .gs-hdr__burger{
   width: 44px;
   height: 44px;
   border-radius: 16px;
-  border: 1px solid rgba(17,19,22,.12);
-  background: rgba(17,19,22,.03);
+  border: 1px solid var(--gs-border, rgba(17,19,22,.12));
+  background: var(--gs-surface2, rgba(255,255,255,.78));
   cursor: pointer;
   display:none;
   align-items:center;
@@ -148,7 +149,7 @@ html{scroll-padding-top:calc(78px + var(--wp-admin--admin-bar--height, 0px));}
   right:0;
   height:2px;
   border-radius: 2px;
-  background: rgba(17,19,22,.85);
+  background: var(--gs-surface2, rgba(255,255,255,.78));
 }
 .gs-hdr__burgerbars:before{ top: 1px; }
 .gs-hdr__burgerbars:after{ bottom: 1px; }
@@ -200,15 +201,15 @@ html{scroll-padding-top:calc(78px + var(--wp-admin--admin-bar--height, 0px));}
   width: 44px;
   height: 44px;
   border-radius: 16px;
-  border: 1px solid rgba(17,19,22,.12);
-  background: rgba(17,19,22,.03);
+  border: 1px solid var(--gs-border, rgba(17,19,22,.12));
+  background: var(--gs-surface2, rgba(255,255,255,.78));
   color: rgba(17,19,22,.92);
   cursor:pointer;
 }
 .gs-drawer__meta{
   border-radius: 18px;
-  border: 1px solid rgba(17,19,22,.10);
-  background: rgba(17,19,22,.03);
+  border: 1px solid var(--gs-border, rgba(17,19,22,.12));
+  background: var(--gs-surface2, rgba(255,255,255,.78));
   padding: 12px;
   color: rgba(17,19,22,.72);
   display:flex;
@@ -219,8 +220,8 @@ html{scroll-padding-top:calc(78px + var(--wp-admin--admin-bar--height, 0px));}
 .gs-drawer__citybtn{
   margin-left:auto;
   border-radius: 999px;
-  border: 1px solid rgba(17,19,22,.12);
-  background: rgba(17,19,22,.03);
+  border: 1px solid var(--gs-border, rgba(17,19,22,.12));
+  background: var(--gs-surface2, rgba(255,255,255,.78));
   color: rgba(17,19,22,.92);
   padding: 8px 10px;
   cursor:pointer;
@@ -236,12 +237,12 @@ html{scroll-padding-top:calc(78px + var(--wp-admin--admin-bar--height, 0px));}
   color: rgba(17,19,22,.88);
   padding: 10px 12px;
   border-radius: 16px;
-  border: 1px solid rgba(17,19,22,.10);
-  background: rgba(17,19,22,.02);
+  border: 1px solid var(--gs-border, rgba(17,19,22,.12));
+  background: var(--gs-surface2, rgba(255,255,255,.78));
   font-weight: 900;
 }
 .gs-drawer__link:hover{
-  background: rgba(17,19,22,.05);
+  background: var(--gs-surface2, rgba(255,255,255,.78));
 }
 .gs-drawer__cta{
   display:flex;

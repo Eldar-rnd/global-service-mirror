@@ -2,12 +2,12 @@
 /**
  * Plugin Name: GS Landing Demo (MU)
  * Description: Demo landing rendering for /?gs_city=...&gs_equipment=...&gs_brand=... with sticky offsets and mobile CTA bar.
- * Version: 0.5.4
+ * Version: 0.5.5
  */
 
 if (!defined('ABSPATH')) { exit; }
 
-define('GS_LD_VER', '0.5.4');
+define('GS_LD_VER', '0.5.5');
 define('GS_LD_PATH', __DIR__ . '/gs-landing-demo');
 define('GS_LD_URL', content_url('mu-plugins/gs-landing-demo'));
 function gs_ld_cookie(string $name): string {
