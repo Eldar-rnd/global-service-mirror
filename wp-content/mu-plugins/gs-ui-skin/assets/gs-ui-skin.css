@@ -511,3 +511,27 @@ html body .gs-catalog :focus-visible{
   outline: 2px solid rgba(210,5,30,.45) !important;
   outline-offset: 2px;
 }
+
+/* =========================================================
+   Light skin — Catalog Overlay Variables Override
+   Why: gs-ui-catalog defines its own :root vars. If loaded after skin,
+   it can re-darken the overlay. Setting vars on .gs-catalog itself
+   wins regardless of stylesheet order.
+   ========================================================= */
+
+html body .gs-catalog{
+  --gs-uic-bg: rgba(17, 19, 22, .38) !important;     /* backdrop */
+  --gs-uic-panel: #ffffff !important;                /* panel surface */
+  --gs-uic-text: #111316 !important;                 /* main text */
+  --gs-uic-muted: #5b6472 !important;                /* muted text */
+  --gs-uic-border: rgba(17, 19, 22, .14) !important; /* borders */
+  --gs-uic-shadow: 0 18px 44px rgba(17, 19, 22, .16) !important;
+  --gs-uic-accent: #D2051E !important;
+}
+
+/* Also force the panel/background directly as a safety net */
+html body .gs-catalog__panel{
+  background: var(--gs-uic-panel) !important;
+  color: var(--gs-uic-text) !important;
+  border-color: var(--gs-uic-border) !important;
+}

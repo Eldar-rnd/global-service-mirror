@@ -2,11 +2,11 @@
 /**
  * Plugin Name: GS UI Skin (MU)
  * Description: Global UI skin tweaks (frontend). Softens the pure-black background to a light neutral tone. Safe, CSS-only.
- * Version: 0.5.9
+ * Version: 0.6.0
  */
 if (!defined('ABSPATH')) exit;
 
-define('GS_UIS_VER', '0.5.9');
+define('GS_UIS_VER', '0.6.0');
 define('GS_UIS_URL', content_url('mu-plugins/gs-ui-skin'));
 
 
