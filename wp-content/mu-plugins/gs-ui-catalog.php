@@ -2,11 +2,11 @@
 /**
  * Plugin Name: GS UI Catalog Overlay (MU)
  * Description: Catalog overlay (frontend-only, demo data). Opens from header link/button "Каталог" and provides quick navigation to demo landing pages.
- * Version: 0.6.1
+ * Version: 0.6.2
  */
 if (!defined('ABSPATH')) { exit; }
 
-define('GS_UIC_VER', '0.6.1');
+define('GS_UIC_VER', '0.6.2');
 define('GS_UIC_DIR', __DIR__ . '/gs-ui-catalog');
 define('GS_UIC_URL', content_url('mu-plugins/gs-ui-catalog'));
 
@@ -76,7 +76,7 @@ add_action('wp_enqueue_scripts', function() {
 add_action('wp_footer', function() {
   if (!gs_uic_is_front() || gs_uic_disabled()) return;
   ?>
-  <div class="gs-catalog" data-gs-catalog hidden aria-hidden="true">
+  <div class="gs-catalog" data-gs-catalog data-scheme="light" style="--gs-uic-bg: rgba(17,19,22,.42); --gs-uic-panel: #ffffff; --gs-uic-popover: #ffffff; --gs-uic-border: rgba(17,19,22,.14); --gs-uic-border-soft: rgba(17,19,22,.10); --gs-uic-border-strong: rgba(17,19,22,.18); --gs-uic-text: #111316; --gs-uic-muted: rgba(17,19,22,.70); --gs-uic-muted2: rgba(17,19,22,.56); --gs-uic-muted3: rgba(17,19,22,.46); --gs-uic-hint: rgba(17,19,22,.60); --gs-uic-link: rgba(17,19,22,.72); --gs-uic-link-hover: rgba(17,19,22,.92); --gs-uic-sep: rgba(17,19,22,.30); --gs-uic-chip-text: rgba(17,19,22,.92); --gs-uic-surface: rgba(17,19,22,.03); --gs-uic-surface2: rgba(17,19,22,.04); --gs-uic-surface3: rgba(17,19,22,.06); --gs-uic-hover: rgba(17,19,22,.10); --gs-uic-hover2: rgba(17,19,22,.08); --gs-uic-accent: #D2051E; --gs-uic-shadow: 0 18px 44px rgba(17,19,22,.20); --gs-uic-shadow-popover: 0 16px 40px rgba(17,19,22,.22); --gs-uic-radius: 22px;" hidden aria-hidden="true">
     <div class="gs-catalog__backdrop" data-gs-catalog-close tabindex="-1" aria-hidden="true"></div>
 
     <div class="gs-catalog__panel" role="dialog" aria-modal="true" aria-label="<?php echo esc_attr__('Каталог', 'global-service'); ?>">
@@ -144,5 +144,16 @@ add_action('wp_footer', function() {
       </div>
     </div>
   </div>
+  <style id="gs-uic-contrast-guard">
+/* Final guard: ensure catalog overlay stays readable even if other CSS overrides tokens */
+.gs-catalog{ color: var(--gs-uic-text) !important; }
+.gs-catalog__panel{ background: var(--gs-uic-panel) !important; border-color: var(--gs-uic-border) !important; }
+.gs-catalog__backdrop{ background: var(--gs-uic-bg) !important; }
+.gs-catalog__citymenu{ background: var(--gs-uic-popover) !important; border-color: var(--gs-uic-border) !important; }
+.gs-catalog__input, .gs-catalog select{ color: var(--gs-uic-text) !important; background: var(--gs-uic-surface) !important; border-color: var(--gs-uic-border) !important; }
+.gs-catalog__input::placeholder{ color: var(--gs-uic-muted2) !important; }
+.gs-catalog__cat, .gs-catalog__tile, .gs-catalog__cityitem{ color: var(--gs-uic-text) !important; }
+.gs-catalog__cat span:last-child, .gs-catalog__tile span:last-child{ color: var(--gs-uic-muted) !important; }
+</style>
   <?php
 }, 20);
