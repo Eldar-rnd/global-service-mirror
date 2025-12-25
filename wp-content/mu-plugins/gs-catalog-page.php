@@ -2,27 +2,13 @@
 /**
  * Plugin Name: GS Catalog Page (MU)
  * Description: Virtual page /catalog/ (frontend-only). Renders catalog hub with city selector, search, categories and brands, linking to demo landing pages.
- * Version: 0.3.4
+ * Version: 0.6.4
  */
 if (!defined('ABSPATH')) { exit; }
 
-define('GS_CP_VER', '0.3.4');
+define('GS_CP_VER', '0.6.4');
 define('GS_CP_PATH', __DIR__ . '/gs-catalog-page');
 define('GS_CP_URL', content_url('mu-plugins/gs-catalog-page'));
-
-
-function gs_cp_city_from_cookie(array $allowed, string $fallback): string {
-  if (empty($_COOKIE['gs_city'])) return $fallback;
-  $raw = (string)$_COOKIE['gs_city'];
-  // Cookie may be URL encoded
-  $raw = rawurldecode($raw);
-  $raw = trim($raw);
-  if ($raw === '') return $fallback;
-  foreach ($allowed as $c) {
-    if ((string)$c === $raw) return $raw;
-  }
-  return $fallback;
-}
 
 function gs_cp_disabled(): bool {
   // Emergency switch: create empty file wp-content/gs-disable-catalog-page to disable this feature.
@@ -48,7 +34,7 @@ function gs_cp_is_catalog_request(): bool {
 
 function gs_cp_demo_data(): array {
   return [
-    'defaultCity' => gs_cp_city_from_cookie(['Ростов-на-Дону','Краснодар','Воронеж'], 'Ростов-на-Дону'),
+    'defaultCity' => 'Ростов-на-Дону',
     'cities' => ['Ростов-на-Дону', 'Краснодар', 'Воронеж'],
     'categories' => [
       [
@@ -106,18 +92,6 @@ add_action('wp_enqueue_scripts', function() {
 }, 30);
 
 // Dev-only safety: avoid accidental indexing on dev
-add_filter('pre_get_document_title', function($title){
-  if (!gs_cp_is_catalog_request()) return $title;
-  return 'Каталог ремонта — выбор техники и бренда | Global Service';
-}, 20);
-
-add_action('wp_head', function(){
-  if (!gs_cp_is_catalog_request()) return;
-  echo "\n<meta name=\"description\" content=\"Выберите город, технику и бренд — получите релевантную страницу ремонта.\">\n";
-  $canon = esc_url(home_url('/catalog/'));
-  echo "\n<link rel=\"canonical\" href=\"{$canon}\">\n";
-}, 2);
-
 add_action('wp_head', function() {
   if (!gs_cp_is_catalog_request()) return;
   echo "\n<meta name=\"robots\" content=\"noindex, nofollow\">\n";

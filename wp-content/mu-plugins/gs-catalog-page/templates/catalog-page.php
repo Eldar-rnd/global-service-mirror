@@ -2,7 +2,7 @@
 if (!defined('ABSPATH')) exit;
 get_header();
 ?>
-<main id="gsMain" class="gs-cp" role="main">
+<main class="gs-cp" role="main">
   <div class="gs-cp__wrap">
     <div class="gs-cp__container">
       <section class="gs-cp__hero">
@@ -13,11 +13,6 @@ get_header();
             Быстрый выбор техники и бренда. Это фронтенд‑демо: переходы ведут на параметры <code>/?gs_city=…&amp;gs_equipment=…&amp;gs_brand=…</code>.
             На backend‑этапе заменим на чистые канонические URL и валидатор сочетаний.
           </p>
-<div class="gs-cp__quick" style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap; align-items:center;">
-  <button class="gs-btn gs-btn--primary" type="button" data-gs-open-search>Быстрый поиск (Ctrl+K)</button>
-  <button class="gs-btn" type="button" data-gs-open-catalog>Оверлей каталога</button>
-  <div class="gs-muted" style="font-size:13px;">Город: <strong data-gs-city-label>—</strong></div>
-</div>
 
           <div class="gs-cp__row" style="margin-top:14px;">
             <button class="gs-cp__chip gs-cp__chip--accent" type="button" data-gs-open-catalog>Открыть оверлей «Каталог»</button>
