@@ -291,3 +291,109 @@ html body.gs-skin-light .gs-footer{
   color: var(--gs-text) !important;
   border-top: 1px solid var(--gs-border-soft) !important;
 }
+
+/* =========================================================
+   Light skin — Catalog Overlay (gs-ui-catalog)
+   Fix: black text on dark surfaces inside catalog/city menus.
+   ========================================================= */
+
+html body.gs-skin-light .gs-catalog[hidden]{ display:none !important; }
+
+/* Backdrop */
+html body.gs-skin-light .gs-catalog__backdrop{
+  background: rgba(17,19,22,.38) !important;
+}
+
+/* Panel */
+html body.gs-skin-light .gs-catalog__panel{
+  background: var(--gs-surface) !important;
+  color: var(--gs-text) !important;
+  border: 1px solid var(--gs-border-soft) !important;
+  box-shadow: var(--gs-shadow) !important;
+}
+
+/* Header area */
+html body.gs-skin-light .gs-catalog__head{
+  background: var(--gs-surface) !important;
+  color: var(--gs-text) !important;
+  border-bottom: 1px solid var(--gs-border-soft) !important;
+}
+html body.gs-skin-light .gs-catalog__title{ color: var(--gs-text) !important; }
+html body.gs-skin-light .gs-dot{
+  background: var(--gs-accent) !important;
+  box-shadow: 0 0 0 4px rgba(210,5,30,.10) !important;
+}
+
+/* Close / icon buttons */
+html body.gs-skin-light .gs-catalog__iconbtn{
+  background: var(--gs-surface-2) !important;
+  color: var(--gs-text) !important;
+  border: 1px solid var(--gs-border-soft) !important;
+}
+html body.gs-skin-light .gs-catalog__iconbtn:hover{
+  background: var(--gs-surface-3) !important;
+}
+
+/* Search */
+html body.gs-skin-light .gs-catalog__label{ color: var(--gs-text-muted) !important; }
+html body.gs-skin-light .gs-catalog__input{
+  background: var(--gs-surface) !important;
+  color: var(--gs-text) !important;
+  border: 1px solid var(--gs-border) !important;
+}
+html body.gs-skin-light .gs-catalog__input::placeholder{
+  color: rgba(17,19,22,.45) !important;
+}
+
+/* Cities dropdown */
+html body.gs-skin-light .gs-catalog__city{
+  background: var(--gs-surface) !important;
+  color: var(--gs-text) !important;
+  border: 1px solid var(--gs-border-soft) !important;
+}
+html body.gs-skin-light .gs-catalog__citymenu{
+  background: var(--gs-surface) !important;
+  color: var(--gs-text) !important;
+  border: 1px solid var(--gs-border-soft) !important;
+  box-shadow: var(--gs-shadow-soft) !important;
+}
+html body.gs-skin-light .gs-catalog__citymenuhead{
+  border-bottom: 1px solid var(--gs-border-soft) !important;
+  color: var(--gs-text-muted) !important;
+}
+html body.gs-skin-light .gs-catalog__citylist{
+  background: transparent !important;
+  color: var(--gs-text) !important;
+}
+html body.gs-skin-light .gs-catalog__citylist button,
+html body.gs-skin-light .gs-catalog__citylist a{
+  color: var(--gs-text) !important;
+}
+html body.gs-skin-light .gs-catalog__citylist button:hover,
+html body.gs-skin-light .gs-catalog__citylist a:hover{
+  background: var(--gs-surface-2) !important;
+}
+
+/* Chips / buttons / links */
+html body.gs-skin-light .gs-catalog__chip,
+html body.gs-skin-light .gs-catalog__btn{
+  background: var(--gs-surface) !important;
+  color: var(--gs-text) !important;
+  border: 1px solid var(--gs-border) !important;
+}
+html body.gs-skin-light .gs-catalog__chip:hover,
+html body.gs-skin-light .gs-catalog__btn:hover{
+  background: var(--gs-surface-2) !important;
+}
+html body.gs-skin-light .gs-catalog__link{
+  color: var(--gs-text) !important;
+}
+html body.gs-skin-light .gs-catalog__link:hover{
+  color: var(--gs-accent) !important;
+}
+
+/* Focus */
+html body.gs-skin-light .gs-catalog :focus-visible{
+  outline: 2px solid rgba(210,5,30,.45) !important;
+  outline-offset: 2px;
+}
